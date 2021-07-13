@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Label alignment="CENTER" prefHeight="50.0" prefWidth="894.0" style="-fx-background-color: gray;" text="登陆" textFill="#f5f0f0" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox prefHeight="418.0" prefWidth="669.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="285.0" prefWidth="600.0">
+               <children>
+                  <VBox layoutX="246.0" layoutY="23.0" prefHeight="248.0" prefWidth="396.0">
+                     <children>
+                        <HBox prefHeight="0.0" prefWidth="396.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label text="登陆身份" textFill="#417add">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="id_select" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label fx:id="id_tips" textFill="#da3535" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: center;">
+                                 <children>
+                                    <Label text="ID" />
+                                    <TextField id="id_input" fx:id="id_input" text="18322001" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label fx:id="password_tips" textFill="#da1919" />
+                              <HBox prefHeight="92.0" prefWidth="236.0" style="-fx-alignment: center;">
+                                 <children>
+                                    <Label text="密码" />
+                                    <PasswordField id="password_input" fx:id="password_input" text="123456" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="94.0" prefWidth="586.0" style="-fx-alignment: center;">
+               <children>
+                  <Button fx:id="signin_button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleSigninButton" text="登陆" />
+                  <Button fx:id="register_button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleRegisterButton" text="注册">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

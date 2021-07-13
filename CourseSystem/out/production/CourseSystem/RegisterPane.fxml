@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="175.0" prefHeight="447.0" prefWidth="479.0">
+               <children>
+                  <VBox prefHeight="625.0" prefWidth="479.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label fx:id="id_tips" textFill="#f51d1d" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: center;">
+                                 <children>
+                                    <Label text="ID" />
+                                    <TextField fx:id="id_input" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label fx:id="password_tips" textFill="#f51616" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: center;">
+                                 <children>
+                                    <Label text="密码" />
+                                    <PasswordField fx:id="password_input" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label fx:id="name_tips" textFill="#eb1a1a" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: center;">
+                                 <children>
+                                    <Label text="姓名" />
+                                    <TextField fx:id="name_input" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label fx:id="department_tips" textFill="#f21414" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: center;">
+                                 <children>
+                                    <Label text="学院" />
+                                    <TextField fx:id="department_input" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="313.0" prefWidth="479.0" style="-fx-alignment: center;">
+                     <children>
+                        <Button fx:id="register_button" mnemonicParsing="false" onAction="#handleRegisterButtonAction" text="注册">
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="sigin_button" mnemonicParsing="false" onAction="#handleSignInButtonAction" text="登陆界面">
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <Label prefHeight="81.0" prefWidth="825.0" style="-fx-background-color: gray;" text="注册" alignment="CENTER" textFill="#fffefe" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

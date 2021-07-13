@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1079.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="课表">
+         <content>
+            <SplitPane dividerPositions="0.4986098239110287" prefHeight="160.0" prefWidth="200.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="630.0" prefWidth="536.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label text="已选课程" />
+                              <TableView fx:id="selectedcoursetable" prefHeight="608.0" prefWidth="536.0">
+                                <columns>
+                                  <TableColumn prefWidth="94.0" text="课程ID" />
+                                  <TableColumn prefWidth="179.0" text="课程名字" />
+                                    <TableColumn prefWidth="121.0" text="学院" />
+                                    <TableColumn prefWidth="141.0" text="开课老师" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </TableView>
+                              <Button mnemonicParsing="false" onAction="#handleRemoveCourseButtonAction" text="退课">
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox layoutX="-3.0" layoutY="-3.0" prefHeight="632.0" prefWidth="538.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label text="可选课程 " />
+                              <TableView fx:id="coursetable" prefHeight="531.0" prefWidth="538.0">
+                                <columns>
+                                  <TableColumn prefWidth="91.0" text="课程ID" />
+                                  <TableColumn prefWidth="155.0" text="课程名字" />
+                                    <TableColumn prefWidth="120.0" text="学院" />
+                                    <TableColumn prefWidth="149.0" text="开课老师" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </TableView>
+                              <Button mnemonicParsing="false" onAction="#handleSelectCourseButtonAction" text="选课">
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </content></Tab>
+    <Tab text="学生信息">
+         <content>
+            <HBox prefHeight="409.0" prefWidth="1079.0">
+               <children>
+                  <Pane prefHeight="627.0" prefWidth="701.0" />
+                  <VBox alignment="CENTER" prefHeight="627.0" prefWidth="743.0">
+                     <children>
+                        <HBox prefHeight="69.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="112.0" text="id:">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></Label>
+                              <Label fx:id="id_show" prefHeight="39.0" prefWidth="350.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="75.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="39.0" prefWidth="111.0" text="姓名:">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></Label>
+                              <Label fx:id="name_show" prefHeight="39.0" prefWidth="351.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="82.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="112.0" text="学院:">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></Label>
+                              <Label fx:id="department_show" prefHeight="39.0" prefWidth="346.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="198.0" prefWidth="649.0">
+                           <children>
+                              <Button fx:id="signout" mnemonicParsing="false" onAction="#handleSignOutAction" prefHeight="30.0" prefWidth="55.0" text="注销" textAlignment="RIGHT" />
+                           </children></HBox>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="627.0" prefWidth="543.0" />
+               </children>
+            </HBox>
+         </content></Tab>
+  </tabs>
+</TabPane>

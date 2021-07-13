@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1022.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="学院老师">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox layoutX="1.0" layoutY="-1.0" prefHeight="615.0" prefWidth="1022.0">
+                     <children>
+                        <TableView fx:id="teacher_table" prefHeight="615.0" prefWidth="653.0">
+                          <columns>
+                            <TableColumn prefWidth="189.0" text="ID" />
+                            <TableColumn prefWidth="195.0" text="教师名称" />
+                              <TableColumn prefWidth="268.0" text="学院" />
+                          </columns>
+                        </TableView>
+                        <SplitPane dividerPositions="0.499184339314845" orientation="VERTICAL" prefHeight="615.0" prefWidth="368.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField fx:id="teacher_query_id_input" layoutX="82.0" layoutY="49.0" />
+                                    <Label layoutX="27.0" layoutY="54.0" />
+                                    <Label layoutX="27.0" layoutY="54.0" text="ID" />
+                                    <Button fx:id="teacher_query_button" layoutX="202.0" layoutY="96.0" mnemonicParsing="false" onAction="#handleTeacherQueryAction" text="查找" />
+                                    <Button fx:id="teacher_show_button" layoutX="103.0" layoutY="96.0" mnemonicParsing="false" onAction="#handleTeacherShowAction" text="显示全部" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="学院学生">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox prefHeight="615.0" prefWidth="1022.0">
+                     <children>
+                        <TableView fx:id="student_table" prefHeight="615.0" prefWidth="861.0">
+                          <columns>
+                            <TableColumn prefWidth="182.0" text="ID" />
+                            <TableColumn prefWidth="259.0" text="学生姓名" />
+                              <TableColumn prefWidth="247.0" text="学院" />
+                          </columns>
+                        </TableView>
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="615.0" prefWidth="500.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Button layoutX="197.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleStudentQueryAction" text="查找" />
+                                    <Button layoutX="96.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleStudentShowAction" text="显示全部" />
+                                    <TextField fx:id="student_query_id_input" layoutX="83.0" layoutY="84.0" />
+                                    <Label layoutX="33.0" layoutY="89.0" text="ID" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="课程信息">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox layoutY="1.0" prefHeight="614.0" prefWidth="1022.0">
+                     <children>
+                        <TableView fx:id="course_table" prefHeight="614.0" prefWidth="803.0">
+                          <columns>
+                            <TableColumn prefWidth="106.0" text="课程ID" />
+                            <TableColumn prefWidth="256.0" text="课程名字" />
+                              <TableColumn minWidth="0.0" prefWidth="157.0" text="教师ID" />
+                              <TableColumn prefWidth="127.0" text="教师" />
+                          </columns>
+                        </TableView>
+                        <SplitPane dividerPositions="0.7222222222222222" orientation="VERTICAL" prefHeight="614.0" prefWidth="531.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="331.0" prefWidth="373.0">
+                                 <children>
+                                    <TextField fx:id="course_query_id_input" layoutX="77.0" layoutY="31.0" />
+                                    <Button layoutX="187.0" layoutY="84.0" mnemonicParsing="false" onAction="#handleCourseQueryAction" text="ID查找" />
+                                    <Button fx:id="addCourseButton" layoutX="46.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleAddCourseAction" text="增加课程" />
+                                    <TextField fx:id="course_id_input" layoutX="86.0" layoutY="189.0" />
+                                    <TextField fx:id="course_name_input" layoutX="86.0" layoutY="243.0" />
+                                    <TextField fx:id="course_teacherID_input" layoutX="86.0" layoutY="301.0" />
+                                    <Label layoutX="28.0" layoutY="194.0" text="ID" />
+                                    <Separator layoutX="9.0" layoutY="123.0" prefHeight="19.0" prefWidth="356.0" />
+                                    <Label layoutX="28.0" layoutY="248.0" text="课程名" />
+                                    <Label layoutX="31.0" layoutY="306.0" text="老师ID" />
+                                    <Button layoutX="86.0" layoutY="84.0" mnemonicParsing="false" onAction="#handleCourseShowAction" text="显示全部" />
+                                    <Button fx:id="removeCourseButton" layoutX="199.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleRemoveCourseAction" text="移除课程" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="373.0">
+                                 <children>
+                                    <Button layoutX="123.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleSignOutAction" prefHeight="47.0" prefWidth="101.0" text="注销" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
